@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomeMainbar.css'
-import {Link,useLocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import QuestionList from './QuestionList'
 import {useNavigate} from 'react-router-dom'
