@@ -5,7 +5,7 @@ export const askQuestion = (questionData, navigate) => async (dispatch) =>
 {   
 try {
     const { data } = await api.postQuestion(questionData)
-    //console.log(data)
+   
     dispatch({ type: 'POST_QUESTION', payload:data })
     dispatch(fetchAllQuestions())
     navigate('/')   
@@ -20,7 +20,7 @@ export const fetchAllQuestions = () => async (dispatch) =>
 try {
     //console.log("fetch data")
     const { data } = await api.getAllQuestions()
-  //  console.log(data)
+
     dispatch({ type: 'FETCH_ALL_QUESTIONS', payload: data })  
 }
  catch (error) {
@@ -59,7 +59,7 @@ export const postAnswer = (answerData) => async (dispatch) =>
      try {
         const { id, noOfAnswers, answerBody, userAnswered, userId } = answerData
         const { data } = await api.postAnswer(id, noOfAnswers, answerBody, userAnswered, userId)
-        console.log(data)
+      
         dispatch({ type: 'POST_ANSWER', payload: data })
         dispatch(fetchAllQuestions())
     
