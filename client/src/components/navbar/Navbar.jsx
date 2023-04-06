@@ -5,7 +5,6 @@ import logo from '../../Assets/mylogo.png'
 import search from '../../Assets/search.svg'
 import { useSelector, useDispatch} from 'react-redux'
 import Avatar from '../../components/Avatar/Avatar'
-import Button from '../../components/Button/Button'
 import './Navbar.css'
 import { setCurrentUser } from '../../actions/currentUser'
 const Navbar = () => {
